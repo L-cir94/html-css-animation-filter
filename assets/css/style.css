@@ -1,23 +1,31 @@
+/* #region ex1 */
 .ex-1-square {
     width: 100px;
     height: 100px;
     border: 1px solid red;
 }
-
 .ex-1-square {
-    transition: width 2s;
-    transition-timing-function: linear;
+    transition: background-color 12s;
+    transition-timing-function: ease-in;
 }
-
 .ex-1-square:hover {
-    width: 600px;
+    background-color: red;
 }
-
+/* #endregion ex1 */
+/* #region ex2 */
 .ex-2-square {
     width: 100px;
     height: 100px;
     background: red;
 }
+.ex-2-square {
+    transition: width 2s;
+    transition-timing-function: linear;
+}
+.ex-2-square:active {
+    width: 600px;
+}
+/* #endregion ex2 */
 
 .ex-3-square {
     width: 100px;
