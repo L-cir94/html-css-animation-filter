@@ -121,10 +121,17 @@ border-radius: 50%;
 }
 
 /* #endregion ex9 */
+/* #region ex10 */
 .ex-10-icon {
     font-size: 60px;
+    animation: spin 3s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(1turn);}
 }
 
+/* #endregion ex10 */
 .ex-11-icon {
     font-size: 60px;
 }
