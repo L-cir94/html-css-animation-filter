@@ -215,32 +215,86 @@ border-radius: 50%;
         right: 20%;
     }
 }
-.ex-13-button:active .ex-13-top-white {
-    animation: moveTopWhite 2s linear;
+.ex-13-button {
+    position: relative;
 }
-@keyframes moveTopWhite {
+
+.ex-13-button:hover > .ex-13-top-white {
+    animation: move2-top 2s linear;
+}
+
+.ex-13-button:hover > .ex-13-bottom-white {
+    animation: move2-bottom 2s linear;
+}
+
+.ex-13-top-white,
+.ex-13-bottom-white {
+    background-color:#f5f5f5;
+    position: absolute;
+}
+
+@keyframes move2-top {
     0% {
+        top: -10px;
         left: 10%;
     }
-    50% {
-        left: calc(100% - 60px);
+
+    20% {
+        left: calc(100% - 30px);
+        top: -10px;
     }
+
+    40% {
+        left: calc(100% - 30px);
+        top: calc(100% - 10px);
+    }
+
+    60% {
+        left: -30px;
+        top: calc(100% - 10px);
+    }
+
+    80% {
+        left: -30px;
+        top: -10px;
+    }
+
     100% {
+        top: -10px;
         left: 10%;
     }
 }
-.ex-13-button:active .ex-13-bottom-white {
-    animation: moveBottomWhite 2s linear;
-}
-@keyframes moveBottomWhite {
+
+@keyframes move2-bottom {
     0% {
+        bottom: -10px;
         right: 20%;
     }
-    50% {
-        right: calc(100% - 60px);
+
+    20% {
+        bottom: -10px;
+        right: calc(100% - 30px);
     }
+
+    40% {
+        bottom: calc(100% - 10px);
+        right: calc(100% - 30px);
+    }
+
+    60% {
+        bottom: calc(100% - 10px);
+        right: -30px;
+    }
+
+    80% {
+        bottom: -10px;
+        right: -30px;
+    }
+
     100% {
+        bottom: -10px;
         right: 20%;
     }
 }
+
 /* #endregion ex 12-13 */
